@@ -1,7 +1,411 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-  <app-student-list></app-student-list>
+<div class="page-container">
+	<!-- BEGIN SIDEBAR -->
+	<div class="page-sidebar-wrapper">
+		<div class="page-sidebar navbar-collapse collapse">
+			<!-- add "navbar-no-scroll" class to disable the scrolling of the sidebar menu -->
+			<!-- BEGIN SIDEBAR MENU -->
+			<ul class="page-sidebar-menu" data-auto-scroll="true" data-slide-speed="200">
+				<li class="sidebar-toggler-wrapper">
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                    <div class="TimeBox">
+						<script type="text/javascript">
+                            <!--tday  =new Array("Sun","Mon","Tue","Wed","Thur","Fri","Sat");-->
+                            tmonth=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+                            
+                            function GetClock(){
+                            d = new Date();
+                            <!--nday   = d.getDay();-->
+                            nmonth = d.getMonth();
+                            ndate  = d.getDate();
+                            nyear = d.getYear();
+                            nhour  = d.getHours();
+                            nmin   = d.getMinutes();
+                            nsec   = d.getSeconds();
+                            
+                            if(nyear<1000) nyear=nyear+1900;
+                            
+                                 if(nhour ==  0) {ap = " AM";nhour = 12;} 
+                            else if(nhour <= 11) {ap = " AM";} 
+                            else if(nhour == 12) {ap = " PM";} 
+                            else if(nhour >= 13) {ap = " PM";nhour -= 12;}
+                            
+                            if(nmin <= 9) {nmin = "0" +nmin;}
+                            if(nsec <= 9) {nsec = "0" +nsec;}
+                            
+                            <!--document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+" "+nhour+":"+nmin+":"+nsec+ap+"";-->
+                            document.getElementById('clockbox').innerHTML=""+ndate+" "+tmonth[nmonth]+" "+nyear+" &nbsp;&nbsp; "+nhour+":"+nmin+""+ap+"";
+                            setTimeout("GetClock()", 1000);
+                            }
+                            window.onload=GetClock;
+                        </script>
+                        <div id="clockbox"></div>                    
+                    </div>
+					<div class="sidebar-toggler hidden-phone">
+					</div>	
+					<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+				</li>
+				<li class="sidebar-search-wrapper">
+					<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+					<!-- <form class="sidebar-search" action="extra_search.html" method="POST">
+						<div class="form-container">
+							<div class="input-box">
+								<a href="javascript:;" class="remove">
+								</a>
+								<input type="text" placeholder="Search..."/>
+								<input type="button" class="submit" value=" "/>
+							</div>
+						</div>
+					</form> -->
+					<!-- END RESPONSIVE QUICK SEARCH FORM -->
+				</li>
+				<li class="start active ">
+					<a href="index.html">
+						<img src="assets/img/MenuIcons/Dashboard_Icon.png" width="24" height="24">
+						<span class="title">
+							Dashboard
+						</span>
+						<span class="selected">
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="assets/img/MenuIcons/Usermanagement_Icon.png" width="24" height="24">
+						<span class="title">
+							Student Management
+						</span>
+						<span class="arrow ">
+						</span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a class='nav-link' routerLinkActive='active' [routerLink]="['/students']">
+								List
+							</a>
+						</li>
+						<li>
+							<a class='nav-link' routerLinkActive='active' [routerLink]="['/studentadd']">
+								Add
+							</a>
+						</li>
+						<li>
+							<a class='nav-link' routerLinkActive='active' [routerLink]="['/students']">
+								Edit
+							</a>
+						</li>
+						<li>
+							<a class='nav-link' routerLinkActive='active' [routerLink]="['/students']">
+								Delete
+							</a>
+						</li>
+						<li>
+							<a class='nav-link' routerLinkActive='active' [routerLink]="['/students']">
+								Upload
+							</a>
+						</li>
+					</ul> 
+					
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="assets/img/MenuIcons/Coursemanagement_Icon.png" width="24" height="24">
+						<span class="title">
+							Course Administration
+						</span>
+						<span class="arrow">
+						</span>
+					</a>
+					<ul class="sub-menu">
+						<li class="tooltips" data-container="body" data-placement="right" data-html="true">
+							<a href="#" target="_blank">
+								<span class="title">
+									Add
+								</span>
+							</a>
+						</li>
+						<li class="tooltips" data-container="body" data-placement="right" data-html="true">
+							<a href="#" target="_blank">
+								<span class="title">
+									Edit
+								</span>
+							</a>
+						</li>
+						<li class="tooltips" data-container="body" data-placement="right" data-html="true">
+							<a href="#" target="_blank">
+								<span class="title">
+									Delete
+								</span>
+							</a>
+						</li>               
+						<li class="tooltips" data-container="body" data-placement="right" data-html="true">
+							<a href="#" target="_blank">
+								<span class="title">
+									Attendance Management
+								</span>
+							</a>
+						</li>                                 
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="assets/img/MenuIcons/Admissions_Icon.png" width="24" height="24">
+						<span class="title">
+							Admissions
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="assets/img/MenuIcons/Exams_Icon.png" width="24" height="24">
+						<span class="title">
+							Exams
+						</span>
+						<span class="arrow ">
+						</span>
+					</a>
+					<ul class="sub-menu">
+						<li>
+							<a href="login.html">
+								 Submenu 1
+							</a>
+						</li>
+						<li>
+							<a href="login_soft.html">
+								 Submenu 2
+							</a>
+						</li>
+					</ul>
+				</li>
+
+			</ul>
+			<!-- END SIDEBAR MENU -->
+		</div>
+	</div>
+	<!-- END SIDEBAR -->
+	<!-- BEGIN CONTENT -->
+	<div class="page-content-wrapper">
+		<div class="page-content">
+			<!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+							<h4 class="modal-title">Modal title</h4>
+						</div>
+						<div class="modal-body">
+							 Widget settings form goes here
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn blue">Save changes</button>
+							<button type="button" class="btn default" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<!-- END SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+			<!-- BEGIN STYLE CUSTOMIZER -->
+			<!--<div class="theme-panel hidden-xs hidden-sm">
+				<div class="toggler">
+				</div>
+				<div class="toggler-close">
+				</div>
+				<div class="theme-options">
+					<div class="theme-option theme-colors clearfix">
+						<span>
+							 THEME COLOR
+						</span>
+						<ul>
+							<li class="color-black current color-default" data-style="default">
+							</li>
+							<li class="color-blue" data-style="blue">
+							</li>
+							<li class="color-brown" data-style="brown">
+							</li>
+							<li class="color-purple" data-style="purple">
+							</li>
+							<li class="color-grey" data-style="grey">
+							</li>
+							<li class="color-white color-light" data-style="light">
+							</li>
+						</ul>
+					</div>
+					<div class="theme-option">
+						<span>
+							 Layout
+						</span>
+						<select class="layout-option form-control input-small">
+							<option value="fluid" selected="selected">Fluid</option>
+							<option value="boxed">Boxed</option>
+						</select>
+					</div>
+					<div class="theme-option">
+						<span>
+							 Header
+						</span>
+						<select class="header-option form-control input-small">
+							<option value="fixed" selected="selected">Fixed</option>
+							<option value="default">Default</option>
+						</select>
+					</div>
+					<div class="theme-option">
+						<span>
+							 Sidebar
+						</span>
+						<select class="sidebar-option form-control input-small">
+							<option value="fixed">Fixed</option>
+							<option value="default" selected="selected">Default</option>
+						</select>
+					</div>
+					<div class="theme-option">
+						<span>
+							 Sidebar Position
+						</span>
+						<select class="sidebar-pos-option form-control input-small">
+							<option value="left" selected="selected">Left</option>
+							<option value="right">Right</option>
+						</select>
+					</div>
+					<div class="theme-option">
+						<span>
+							 Footer
+						</span>
+						<select class="footer-option form-control input-small">
+							<option value="fixed">Fixed</option>
+							<option value="default" selected="selected">Default</option>
+						</select>
+					</div>
+				</div>
+			</div>-->
+			<!-- END STYLE CUSTOMIZER -->
+			<!-- BEGIN PAGE HEADER-->
+			<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+					<h3 class="page-title">
+					Dashboard 
+					</h3>
+					<ul class="page-breadcrumb breadcrumb">
+						<li>
+							<i class="fa fa-home"></i>
+							<a href="index.html">
+								Home
+							</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+						<li>
+							<a href="#">
+								Dashboard
+							</a>
+						</li>
+						<li class="pull-right">
+							<div id="dashboard-report-range" class="dashboard-date-range tooltips" data-placement="top">
+								<i class="fa fa-calendar"></i>
+								<span>
+								</span>
+								<i class="fa fa-angle-down"></i>
+							</div>
+						</li>
+					</ul>
+					<!-- END PAGE TITLE & BREADCRUMB-->
+				</div>
+			</div>
+			<!-- END PAGE HEADER-->
+			<!-- BEGIN DASHBOARD STATS -->
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat blue">
+                    	<div class="curve">
+                            <div class="visual">
+                                <img src="assets/img/Notification_Image.png" width="110" height="85">
+                            </div>
+                            <div class="details">
+                                <div class="number">
+                                     34
+                                </div>
+                                <div class="desc">
+                                     New notifications
+                                </div>
+                            </div>
+                            <a class="more" href="#">
+                                 View more 
+                            </a>
+                    	</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat red">
+                    	<div class="curve">
+                            <div class="visual">
+                                <img src="assets/img/Chart_Image.png" width="110" height="85">
+                            </div>
+                            <div class="details">
+                                <div class="number">
+                                     66 / 70
+                                </div>
+                                <div class="desc">
+                                     Teachers attendance
+                                </div>
+                            </div>
+                            <a class="more" href="#">
+                                 View more
+                            </a>
+                        </div>    
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat green">
+                    	<div class="curve">                    
+                            <div class="visual">
+                                <img src="assets/img/Shield_Image.png" width="110" height="85">
+                            </div>
+                            <div class="details">
+                                <div class="number">
+                                     15
+                                </div>
+                                <div class="desc">
+                                     Results & achievements
+                                </div>
+                            </div>
+                            <a class="more" href="#">
+                                 View more
+                            </a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div class="dashboard-stat purple">
+                    	<div class="curve">
+                            <div class="visual">
+                                <img src="assets/img/Chart_Image.png" width="110" height="85">
+                            </div>
+                            <div class="details">
+                                <div class="number">
+                                     26 / 1050
+                                </div>
+                                <div class="desc">
+                                     Students attendance
+                                </div>
+                            </div>
+                            <a class="more" href="#">
+                                 View more
+                            </a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END DASHBOARD STATS -->
+			
+      <div class='container'>
+        <router-outlet></router-outlet>
+      </div>
+    
+			
+			
+		</div>
+	</div>
+	<!-- END CONTENT -->
 </div>

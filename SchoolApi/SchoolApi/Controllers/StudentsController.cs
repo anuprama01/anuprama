@@ -48,5 +48,13 @@ namespace SchoolApi.Controllers
             return students.ToArray();*/
                  
         }
+
+        [HttpPost]
+        [EnableCors("AllowOrigin")]
+        public  IActionResult PostStudent(Student student)
+        {
+            studentData.Add(student);
+            return CreatedAtAction("Get", new { id = student.studentId }, student);
+        }
     }
 }

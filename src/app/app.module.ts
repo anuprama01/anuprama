@@ -7,17 +7,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentListComponent } from './students/student-list.component';
 import { from } from 'rxjs';
+import { RouterModule } from '@angular/router';
+import { StudentAddComponent } from './students/student-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentListComponent
+    StudentListComponent,
+    StudentAddComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      {path:'students', component:StudentListComponent},
+      {path:'studentadd', component:StudentAddComponent}
+     
+
+    ]),
 
   ],
   providers: [],

@@ -1,0 +1,38 @@
+/******************************************************************************************************
+                             
+      File Name          : Style_735.css            
+      Description        : StyleSheet page
+      Author(s)          : Baskaran V, Punith Kumar K          
+      Date Created       : 10/07/2014                       
+      Date Modified      : 10/07/2014                      
+      Revision History   :                               
+      Last Reviewed by   :  DD/MM/YYYY                       
+      Last date of review:  DD/MM/YYYY
+           
+******************************************************************************************************/
+
+@charset "utf-8";
+/* CSS Document */
+
+/************************************************************************************
+smaller than 735
+*************************************************************************************/
+
+@media screen and (max-width: 735px) {
+
+/*.Bottom_Img_Container
+{
+	bottom: 0%;
+    float: left;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    text-align: center;
+    width: 80% !important;
+}*/
+
+
+
+}
+
+
+

@@ -1,11 +1,12 @@
 C:\projects\SchoolApi\Data\bin\Debug\netcoreapp3.1\Data.deps.json
+C:\projects\SchoolApi\Data\bin\Debug\netcoreapp3.1\Data.runtimeconfig.json
+C:\projects\SchoolApi\Data\bin\Debug\netcoreapp3.1\Data.runtimeconfig.dev.json
 C:\projects\SchoolApi\Data\bin\Debug\netcoreapp3.1\Data.dll
 C:\projects\SchoolApi\Data\bin\Debug\netcoreapp3.1\Data.pdb
 C:\projects\SchoolApi\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfoInputs.cache
 C:\projects\SchoolApi\Data\obj\Debug\netcoreapp3.1\Data.AssemblyInfo.cs
+C:\projects\SchoolApi\Data\obj\Debug\netcoreapp3.1\Data.csproj.CoreCompileInputs.cache
 C:\projects\SchoolApi\Data\obj\Debug\netcoreapp3.1\Data.dll
 C:\projects\SchoolApi\Data\obj\Debug\netcoreapp3.1\Data.pdb
-C:\projects\SchoolApi\Data\obj\Debug\netcoreapp3.1\Data.csproj.CoreCompileInputs.cache
-C:\projects\SchoolApi\Data\bin\Debug\netcoreapp3.1\Data.runtimeconfig.json
-C:\projects\SchoolApi\Data\bin\Debug\netcoreapp3.1\Data.runtimeconfig.dev.json
 C:\projects\SchoolApi\Data\obj\Debug\netcoreapp3.1\Data.genruntimeconfig.cache
+C:\projects\SchoolApi\Data\obj\Debug\netcoreapp3.1\Data.csprojAssemblyReference.cache

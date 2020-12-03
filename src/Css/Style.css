@@ -1,0 +1,666 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body
+{
+	padding:0px;
+	margin:0px;
+	background-color:#e5e2dd;
+	width::100%;
+}
+
+html, address, blockquote, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, dd, dt,
+button, del, ins, map, object,
+a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
+strong, sub, sup, tt, var, legend, fieldset
+{
+	margin: 0;
+	padding: 0;
+}
+
+img, fieldset
+{
+	border: 0;
+}
+
+/* set image max width to 100% */
+img
+{
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{ 
+    display: block;
+}
+
+
+/*New Css (All Resolution Support) Starts*/
+
+.OuterContainer
+{
+	width:98%;
+	height:100%;
+	position:absolute;
+	text-align:center;
+}
+
+.LogoContainer
+{
+	width:100%;
+	float:left;
+	text-align:left;
+	margin-bottom:5%;
+    margin-left: 5px;
+    margin-top: 25px;
+    text-align: left;	
+}
+
+.Bottom_Img_Container
+{
+	float:left;
+	display:table-cell;
+	margin-bottom:0 !important;
+	padding-bottom:0 !important;
+	bottom:0%;
+	/*border: 5px solid #fff;*/
+	text-align:left;
+	width:50%;
+}
+
+.LoginContainer
+{
+	/*display: table;
+    height: 450px;*/
+	width:86%;
+	height:92%;
+    margin: auto;
+    padding-left: 7%;
+	/*padding-right: 7%;*/
+    text-align: center;
+    vertical-align: middle;
+}
+
+.CenterLoginBox
+{
+	background:url(../assets/img/LoginBox.png) repeat-x right top #F4F5F5;
+    display: table-cell;
+    float: left;
+ 	min-height: 488px;
+	height:auto;
+    text-align: center;
+    width: 376px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;	
+	border:1px solid #fff;
+}
+
+
+.CenterLoginInnerDiv
+{
+/*	float:left;*/
+	width:100%;
+	text-align:center;
+	height:100%;
+	display:table;
+}
+
+.LoginImage_Spacediv
+{
+	float:left;
+	display:table-cell;
+	width:10%;
+}
+
+.LoginArrow_Container
+{
+	width:100%;
+/*	display:table-row;
+	float:left;*/
+	vertical-align:middle;
+	text-align:left;
+	padding:35px 0 40px 20px;
+	font-family:Segoe UI;
+	font-size:30px;
+	font-weight:lighter;
+	color:#1a1a1a;
+}
+
+.Usernametext_OuterContainer
+{
+	/*float:left;*/
+	width:100%;
+/*	display:table-row;*/
+	vertical-align:middle;
+	text-align:left;
+	padding:0px 20px 7px 20px;
+}
+
+.Usernametext_Font
+{
+	font-family:Segoe UI;
+	font-size:16px;
+	font-weight:500;
+	color:#4c4c4c;
+	vertical-align:middle;
+	text-shadow:1px 1px 1px #FFFFFF;
+	text-align:left;
+}
+
+.LoginTenant_DropDown
+{
+	background-color:#eaeaea !important;
+	border:1px solid #b3b3b3 !important;
+	padding:8px 5px 8px 5px !important;
+	border-radius:6px !important;
+	height:40px !important;
+	color:#777777 !important;
+	margin-top:0 !important;
+	margin-bottom:7px !important;
+	width:93% !important;
+	box-shadow:1px 1px 2px #C0C0C0 !important;
+}
+
+.LoginTenant_DropDown:hover {border:1px solid #3ab1e9 !important;}
+
+.LoginTenant_DropDown:focus {border:1px solid #3ab1e9 !important;}
+
+.LoginTenant_TextBox
+{
+    background-color: #ffffff  !important;
+    border: 1px solid #cacaca !important;
+	border-left: 3px solid #0fbc3c !important;
+	padding:5px !important;
+	height:30px !important;
+	color:#5c5b5b !important;
+	margin:7px 10px 7px 0px !important;
+/*	width:100% ;*/
+	width:320px;
+}
+
+/* Login error  */
+
+.LoginError
+{
+    background-color: #ffffff  !important;
+    border: 1px solid #a94442 !important;
+	border-left: 3px solid #a94442 !important;
+	padding:5px !important;
+	height:30px !important;
+	color:#5c5b5b !important;
+	margin:7px 10px 7px 0px !important;
+	width:320px;
+}
+
+.LoginErrorMsg
+{
+	font-family:Segoe UI;
+	font-size:13px;
+	font-weight:lighter;
+	color:#b94a48;
+	display:block;
+}
+
+.loginalertmsg{
+	width:280px;
+}
+
+.LoginTenant_TextBox:hover {border:1px solid #3ab1e9 !important; border-left: 3px solid #0fbc3c !important;}
+
+.LoginTenant_TextBox:focus {border:1px solid #3ab1e9 !important; border-left: 3px solid #0fbc3c !important;}
+
+.LoginBtnBg
+{
+	background: #2aabda; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: -moz-linear-gradient(top, #2aabda 0%, #0d8ebd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2aabda), color-stop(100%,#0d8ebd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #2aabda 0%,#0d8ebd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #2aabda 0%,#0d8ebd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #2aabda 0%,#0d8ebd 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #2aabda 0%,#0d8ebd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2aabda', endColorstr='#0d8ebd',GradientType=0 ); /* IE6-8 */
+	width:333px !important;
+	height:42px;
+	border:1px solid #09779f;
+	border-radius:4px;
+	font-family:Segoe UI;
+	font-size:16px;
+	font-weight:normal;
+	text-shadow:0px -1px #002134;
+	color:#FFF;
+	cursor:pointer;
+	margin-top:10px;
+}
+
+.LoginBtnBg:hover
+{
+	background: #2aabda; /* Old browsers */
+	width:333px !important;
+	height:42px;
+	border:1px solid #09779f;
+	border-radius:4px;
+	font-family:Segoe UI;
+	font-size:16px;
+	font-weight:normal;
+	text-shadow:0px -1px #002134;
+	color:#FFF;
+	cursor:pointer;
+	margin-top:10px;
+}
+
+
+@media screen and (max-width: 915px) {
+
+.Bottom_Img_Container
+{
+	
+	width:99%;
+}
+
+.LoginImage_Spacediv
+{
+	float:left;
+	display:none;
+	width:10%;
+}
+
+
+.LoginContainer
+{
+	/*display: table;
+    height: 450px;*/
+	width:100%;
+    margin: auto;
+}
+
+.CenterLoginBox
+{
+	
+   	width:100%;
+    margin: auto;
+	margin-top:10px !important;
+}
+
+.CenterLoginInnerDiv
+{
+	float:left;
+	width:100%;
+	text-align:center;
+	height:100%;
+	display:table;
+}
+
+.OuterContainer
+{
+	width:87%;
+	height:100%;
+	position:absolute;
+	text-align:center;
+}
+
+}
+
+@media screen and (max-width: 1160px) {
+
+.LoginImage_Spacediv
+{
+	float:left;
+	width:25px;
+}
+
+}
+
+@media screen and (max-width: 1255px) {
+
+/*.LoginImage_Spacediv
+{
+	float:left;
+	display:table-cell;
+	width:20px;
+}*/
+
+}
+
+@media screen and (max-width: 1165px) {
+
+/*.LoginImage_Spacediv
+{
+	float:left;
+	display:table-cell;
+	width:5px;
+}*/
+
+/*.Bottom_Img_Container
+{
+	bottom: 0%;
+    float: left;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    text-align: center;
+    width: 85% !important;
+}*/
+
+/*.LoginContainer {
+    height: 450px;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 620px;
+	margin-bottom:20px !important;
+	display: table;
+}*/
+
+}
+
+
+/*New Css (All Resolution Support) Ends*/
+
+
+
+
+.Bg_Img
+{
+	background:url(../assets/img/Login_BG.png) #fff ;
+	background-position:center top;
+	background-repeat:repeat-x;
+}
+
+.LogoImg
+{
+	background-image:url(../assets/img/Login_Logo.png);
+	background-position: -9px -42px;
+	background-repeat:no-repeat;
+	width:474px;
+	height:96px;
+}
+
+.InnerBoxTransBg
+{
+	background-image:url(../Images/Transparent_Bg.png);
+	background-position:left top;
+	background-repeat:repeat;
+}
+
+.BoxBorder
+{
+	border:3px solid #dbdcdd;
+}
+
+.BorderBottomBlack
+{
+	border-bottom:1px solid #000000;
+}
+
+
+.footer{
+    font-size: 12px;
+    padding: 8px 20px 5px;
+    float: left;
+    margin-top: 1%;
+    width: 99%;	
+
+}
+
+.footer .footer-inner{
+    display: inline-block;
+    float: left;
+}
+
+.LoginBox{
+	min-width:486px;
+	width:100%;
+}
+
+.LoginTab{
+/*	position:absolute;
+	right:285px;*/
+	float: right;
+    position: relative;
+	top: -367px;
+   /* width: 22%;*/
+    z-index: 1000;
+	display: table-cell;
+}
+
+.LoginTabVertical{
+	float: right;
+    position: relative;
+	top: -367px;
+	display:none;
+    z-index: 1000;
+}
+
+.NormalTab{
+	background:url(../assets/img/LoginTab.png) no-repeat left center;
+	height:97px;
+	width:109px;
+	cursor:pointer;
+	opacity:.4;
+}
+
+.NormalTab:hover{
+	background:url(../assets/img/LoginTab.png) no-repeat left center;
+	height:97px;
+	width:109px;
+	opacity:1;
+}
+
+.NormalTab_Selected{
+	background:url(../assets/img/LoginTab.png) no-repeat left center;
+	height:97px;
+	width:109px;
+	opacity:1;
+}
+
+.clearall{
+	clear:both;
+}
+
+.line{
+	background:#d4d4d4 !important;
+	height:1px  !important;
+	width:75%;
+}
+
+.ForgotText{
+    font-family: "Segoe UI","Segoe UI Light",Arial;
+    font-size: 15px;
+    padding-left: 20px;
+    text-align: left;
+	color:#989898;
+	margin:20px 0px 20px 0px;
+	float:left;
+}
+
+.ForgotText span{
+    font-family: "Segoe UI","Segoe UI Light",Arial;
+    font-size: 14px;
+    padding-top: 7px;
+	float:left;
+    text-align: left;
+	color:#515151;
+}
+
+.ForgotText span a{
+	color:#0090ff;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+.ForgotText span a:hover{
+	color:#0090ff;
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+.Forgot_Caption{
+    font-family: "Segoe UI","Segoe UI Light",Arial;
+    font-size: 14px;
+    padding: 0px 0px 20px 20px;
+	float:left;
+    text-align: left;
+	color:#515151;	
+	font-weight:normal;
+}
+
+.cancelBtnBg{
+	background: #bcbcbb; /* Old browsers */
+	/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	background: -moz-linear-gradient(top, #bcbcbb 0%, #a2a3a3 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bcbcbb), color-stop(100%,#a2a3a3)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #bcbcbb 0%,#a2a3a3 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #bcbcbb 0%,#a2a3a3 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #bcbcbb 0%,#a2a3a3 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #bcbcbb 0%,#a2a3a3 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bcbcbb', endColorstr='#a2a3a3',GradientType=0 ); /* IE6-8 */	
+	border: 1px solid #868686;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-weight: normal;
+    height: 42px;
+    margin-top: 10px;
+    text-shadow: 0 -1px #002134;
+    width: 333px !important;
+}
+
+.cancelBtnBg:hover{
+	background: #bcbcbb;
+	border: 1px solid #868686;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-weight: normal;
+    height: 42px;
+    margin-top: 10px;
+    text-shadow: 0 -1px #002134;
+    width: 333px !important;
+}
+
+@media screen and (max-width: 1105px) {	
+	.LoginContainer
+	{
+		padding-left: 1%;
+		padding-right: 7%;	
+	}
+	
+}
+
+@media screen and (max-width: 910px) {	
+	.LoginTab{
+		display:none;
+	}
+	
+	.LoginContainer
+	{
+		padding-left: 7%;
+		padding-right: 7%;	
+	}
+	
+	.LoginTenant_TextBox
+	{
+		background-color: #ffffff  !important;
+		border: 1px solid #cacaca !important;
+		border-left: 3px solid #0fbc3c !important;
+		padding:5px !important;
+		height:30px !important;
+		color:#5c5b5b !important;
+		margin:7px 10px 7px 0px !important;
+	/*	width:100% ;*/
+		width:98%;
+	}	
+	
+	/* Login error  */
+
+	.LoginError
+	{
+		background-color: #ffffff  !important;
+		border: 1px solid #a94442 !important;
+		border-left: 3px solid #a94442 !important;
+		padding:5px !important;
+		height:30px !important;
+		color:#5c5b5b !important;
+		margin:7px 10px 7px 0px !important;
+		width:98%;
+	}
+
+	.loginalertmsg{
+		width:79%;
+	}
+	
+	.LoginBtnBg
+	{
+		width:100% !important;
+	}
+	
+	.LoginBtnBg:hover
+	{
+		width:100% !important;
+	}
+
+	.cancelBtnBg{
+		width:100% !important;
+	}
+	.cancelBtnBg:hover{
+		width:100% !important;
+	}
+
+.LoginTabVertical{
+   display: block;
+    float: right;
+    position: relative;
+    top: 10px;
+    z-index: 1000;
+	min-width:318px;
+}
+.NormalTabVertical{
+	background:url(../assets/img/LoginTab_Vertical.png) no-repeat left center;
+	height:98px;
+	width:96px;
+	cursor:pointer;
+	opacity:.4;
+	float:left;
+	margin:0 5px;
+}
+
+.NormalTabVertical:hover{
+	background:url(../assets/img/LoginTab_Vertical.png) no-repeat left center;
+	height:98px;
+	width:96px;
+	opacity:1;
+	margin:0 5px;	
+}
+
+.NormalTabVertical_Selected{
+	background:url(../assets/img/LoginTab_Vertical.png) no-repeat left center;
+	height:98px;
+	width:96px;
+	opacity:1;
+	float:left;	
+	margin:0 5px;	
+}
+
+
+}
+
+@media screen and (max-width: 520px) {	
+	.LoginTab{
+		display:none;
+	}
+}
+
+@media screen and (max-width: 420px) {	
+	.LoginTab{
+		display:none;
+	}
+}

@@ -1,0 +1,27 @@
+/******************************************************************************************************
+                             
+      File Name          : Style_420.css            
+      Description        : StyleSheet page
+      Author(s)          : Baskaran V, Punith Kumar K         
+      Date Created       : 10/07/2014                       
+      Date Modified      : 10/07/2014                      
+      Revision History   :                               
+      Last Reviewed by   :  DD/MM/YYYY                       
+      Last date of review:  DD/MM/YYYY
+           
+******************************************************************************************************/
+
+@charset "utf-8";
+/* CSS Document */
+
+/************************************************************************************
+smaller than 420
+*************************************************************************************/
+
+@media screen and (max-width: 420px) {
+
+.OuterContainer {width:85%; position:absolute; text-align:center;}
+
+.Usernametext_OuterContainer {padding:0px 20px 7px 12px;}
+
+}

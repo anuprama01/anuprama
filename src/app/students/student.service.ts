@@ -30,6 +30,26 @@ export class StudentService{
             
     }
 
+    addStudent(student:IStudent): Observable<IStudent> {
+      const headers = new HttpHeaders();
+        headers.append('Access-Control-Allow-Headers', 'Content-Type');
+        headers.append('Access-Control-Allow-Methods', 'POST');
+        headers.append('Access-Control-Allow-Origin', '*');
+
+       
+        headers.append('Content-Type', 'application/json');
+        alert(JSON.stringify(student));
+alert(this.studentUrl);
+//this.http.post<IStudent>(this.studentUrl,student);
+      
+      return this.http.post<IStudent>(this.studentUrl,student,{headers}).pipe(
+            tap(data => console.log('All: ' + JSON.stringify(data))),
+            catchError(this.handleError)
+          );
+
+          alert('test');
+    }
+
     private handleError(err: HttpErrorResponse) {
         // in a real world app, we may send the server to some remote logging infrastructure
         // instead of just logging it to the console

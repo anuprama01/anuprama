@@ -25,6 +25,9 @@ namespace Data.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("address")
                         .HasColumnType("nvarchar(max)");
 
